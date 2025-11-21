@@ -38,7 +38,6 @@ export default function Edit({ event, venues }) {
                                         value={data.title}
                                         onChange={(e) => setData('title', e.target.value)}
                                         className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
-                                        required
                                     />
                                     {errors.title && (
                                         <p className="mt-1 text-sm text-red-600">{errors.title}</p>
@@ -53,7 +52,6 @@ export default function Edit({ event, venues }) {
                                         value={data.venue_id}
                                         onChange={(e) => setData('venue_id', e.target.value)}
                                         className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
-                                        required
                                     >
                                         <option value="">Select a venue</option>
                                         {venues.map((venue) => (
@@ -76,7 +74,6 @@ export default function Edit({ event, venues }) {
                                         value={data.start_datetime}
                                         onChange={(e) => setData('start_datetime', e.target.value)}
                                         className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
-                                        required
                                     />
                                     {errors.start_datetime && (
                                         <p className="mt-1 text-sm text-red-600">{errors.start_datetime}</p>
@@ -92,7 +89,6 @@ export default function Edit({ event, venues }) {
                                         value={data.end_datetime}
                                         onChange={(e) => setData('end_datetime', e.target.value)}
                                         className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
-                                        required
                                     />
                                     {errors.end_datetime && (
                                         <p className="mt-1 text-sm text-red-600">{errors.end_datetime}</p>

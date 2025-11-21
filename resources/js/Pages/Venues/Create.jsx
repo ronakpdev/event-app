@@ -60,7 +60,6 @@ export default function Create({ accessibilityOptions, layoutOptions }) {
                                         value={data.name}
                                         onChange={(e) => setData('name', e.target.value)}
                                         className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
-                                        required
                                     />
                                     {errors.name && (
                                         <p className="mt-1 text-sm text-red-600">{errors.name}</p>
@@ -77,7 +76,6 @@ export default function Create({ accessibilityOptions, layoutOptions }) {
                                             value={data.city}
                                             onChange={(e) => setData('city', e.target.value)}
                                             className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
-                                            required
                                         />
                                         {errors.city && (
                                             <p className="mt-1 text-sm text-red-600">{errors.city}</p>
@@ -93,7 +91,6 @@ export default function Create({ accessibilityOptions, layoutOptions }) {
                                             value={data.state}
                                             onChange={(e) => setData('state', e.target.value)}
                                             className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
-                                            required
                                         />
                                         {errors.state && (
                                             <p className="mt-1 text-sm text-red-600">{errors.state}</p>
@@ -110,7 +107,6 @@ export default function Create({ accessibilityOptions, layoutOptions }) {
                                         value={data.capacity}
                                         onChange={(e) => setData('capacity', e.target.value)}
                                         className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
-                                        required
                                         min="1"
                                     />
                                     {errors.capacity && (

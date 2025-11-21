@@ -27,7 +27,6 @@ export default function VenueFormModal({
                                 value={form.data.name}
                                 onChange={(e) => form.setData('name', e.target.value)}
                                 className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
-                                required
                             />
                             {form.errors.name && (
                                 <p className="mt-1 text-sm text-red-600">{form.errors.name}</p>
@@ -44,7 +43,6 @@ export default function VenueFormModal({
                                     value={form.data.city}
                                     onChange={(e) => form.setData('city', e.target.value)}
                                     className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
-                                    required
                                 />
                                 {form.errors.city && (
                                     <p className="mt-1 text-sm text-red-600">{form.errors.city}</p>
@@ -60,7 +58,6 @@ export default function VenueFormModal({
                                     value={form.data.state}
                                     onChange={(e) => form.setData('state', e.target.value)}
                                     className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
-                                    required
                                 />
                                 {form.errors.state && (
                                     <p className="mt-1 text-sm text-red-600">{form.errors.state}</p>
@@ -78,7 +75,6 @@ export default function VenueFormModal({
                                 value={form.data.capacity}
                                 onChange={(e) => form.setData('capacity', e.target.value)}
                                 className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
-                                required
                             />
                             {form.errors.capacity && (
                                 <p className="mt-1 text-sm text-red-600">{form.errors.capacity}</p>

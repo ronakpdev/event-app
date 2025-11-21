@@ -26,7 +26,6 @@ export default function EventFormModal({
                                 value={form.data.title}
                                 onChange={(e) => form.setData('title', e.target.value)}
                                 className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
-                                required
                             />
                             {form.errors.title && (
                                 <p className="mt-1 text-sm text-red-600">{form.errors.title}</p>
@@ -60,7 +59,6 @@ export default function EventFormModal({
                                     value={form.data.start_datetime}
                                     onChange={(e) => form.setData('start_datetime', e.target.value)}
                                     className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
-                                    required
                                 />
                                 {form.errors.start_datetime && (
                                     <p className="mt-1 text-sm text-red-600">{form.errors.start_datetime}</p>
@@ -76,7 +74,6 @@ export default function EventFormModal({
                                     value={form.data.end_datetime}
                                     onChange={(e) => form.setData('end_datetime', e.target.value)}
                                     className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
-                                    required
                                 />
                                 {form.errors.end_datetime && (
                                     <p className="mt-1 text-sm text-red-600">{form.errors.end_datetime}</p>
