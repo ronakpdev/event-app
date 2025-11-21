@@ -20,7 +20,7 @@ export default function VenueFormModal({
                     <div className="space-y-6">
                         <div>
                             <label className="block text-sm font-medium text-gray-700">
-                                Name
+                                Name <span className="text-red-500">*</span>
                             </label>
                             <input
                                 type="text"
@@ -37,7 +37,7 @@ export default function VenueFormModal({
                         <div className="grid grid-cols-2 gap-4">
                             <div>
                                 <label className="block text-sm font-medium text-gray-700">
-                                    City
+                                    City <span className="text-red-500">*</span>
                                 </label>
                                 <input
                                     type="text"
@@ -53,7 +53,7 @@ export default function VenueFormModal({
 
                             <div>
                                 <label className="block text-sm font-medium text-gray-700">
-                                    State
+                                    State <span className="text-red-500">*</span>
                                 </label>
                                 <input
                                     type="text"
@@ -70,7 +70,7 @@ export default function VenueFormModal({
 
                         <div>
                             <label className="block text-sm font-medium text-gray-700">
-                                Capacity
+                                Capacity <span className="text-red-500">*</span>
                             </label>
                             <input
                                 type="number"

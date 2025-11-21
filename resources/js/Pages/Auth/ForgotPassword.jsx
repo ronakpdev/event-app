@@ -1,4 +1,5 @@
 import InputError from '@/Components/Form/InputError';
+import InputLabel from '@/Components/Form/InputLabel';
 import PrimaryButton from '@/Components/Form/PrimaryButton';
 import TextInput from '@/Components/Form/TextInput';
 import GuestLayout from '@/Layouts/GuestLayout';
@@ -32,15 +33,18 @@ export default function ForgotPassword({ status }) {
             )}
 
             <form onSubmit={submit}>
-                <TextInput
-                    id="email"
-                    type="email"
-                    name="email"
-                    value={data.email}
-                    className="mt-1 block w-full"
-                    isFocused={true}
-                    onChange={(e) => setData('email', e.target.value)}
-                />
+                <div>
+                    <InputLabel htmlFor="email" value="Email" required />
+                    <TextInput
+                        id="email"
+                        type="email"
+                        name="email"
+                        value={data.email}
+                        className="mt-1 block w-full"
+                        isFocused={true}
+                        onChange={(e) => setData('email', e.target.value)}
+                    />
+                </div>
 
                 <InputError message={errors.email} className="mt-2" />
 

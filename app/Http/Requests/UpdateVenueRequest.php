@@ -17,6 +17,17 @@ class UpdateVenueRequest extends FormRequest
     }
 
     /**
+     * Prepare the data for validation.
+     */
+    protected function prepareForValidation(): void
+    {
+        // Set default for avg_ratings if it's being updated and is null
+        if ($this->has('avg_ratings') && $this->avg_ratings === null) {
+            $this->merge(['avg_ratings' => 0.00]);
+        }
+    }
+
+    /**
      * Get the validation rules that apply to the request.
      *
      * @return array<string, \Illuminate\Contracts\Validation\ValidationRule|array<mixed>|string>

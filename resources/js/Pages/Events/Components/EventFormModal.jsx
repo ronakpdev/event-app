@@ -19,7 +19,7 @@ export default function EventFormModal({
                     <div className="space-y-6">
                         <div>
                             <label className="block text-sm font-medium text-gray-700">
-                                Title
+                                Title <span className="text-red-500">*</span>
                             </label>
                             <input
                                 type="text"
@@ -33,15 +33,19 @@ export default function EventFormModal({
                             )}
                         </div>
 
-                        <SearchableSelect
-                            label="Venue"
-                            options={venues}
-                            selected={form.data.venue_id}
-                            onChange={(value) => form.setData('venue_id', value || '')}
-                            placeholder="Select a venue"
-                            displayField="name"
-                            valueField="id"
-                        />
+                        <div>
+                            <label className="block text-sm font-medium text-gray-700 mb-1">
+                                Venue <span className="text-red-500">*</span>
+                            </label>
+                            <SearchableSelect
+                                options={venues}
+                                selected={form.data.venue_id}
+                                onChange={(value) => form.setData('venue_id', value || '')}
+                                placeholder="Select a venue"
+                                displayField="name"
+                                valueField="id"
+                            />
+                        </div>
                         {form.errors.venue_id && (
                             <p className="mt-1 text-sm text-red-600">{form.errors.venue_id}</p>
                         )}
@@ -49,7 +53,7 @@ export default function EventFormModal({
                         <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
                             <div>
                                 <label className="block text-sm font-medium text-gray-700">
-                                    Start Date & Time
+                                    Start Date & Time <span className="text-red-500">*</span>
                                 </label>
                                 <input
                                     type="datetime-local"
@@ -65,7 +69,7 @@ export default function EventFormModal({
 
                             <div>
                                 <label className="block text-sm font-medium text-gray-700">
-                                    End Date & Time
+                                    End Date & Time <span className="text-red-500">*</span>
                                 </label>
                                 <input
                                     type="datetime-local"

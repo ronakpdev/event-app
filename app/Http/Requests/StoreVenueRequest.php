@@ -17,6 +17,20 @@ class StoreVenueRequest extends FormRequest
     }
 
     /**
+     * Prepare the data for validation.
+     */
+    protected function prepareForValidation(): void
+    {
+        // Set default values for nullable fields before validation
+        $this->merge([
+            'avg_ratings' => $this->avg_ratings ?? 0.00,
+            'accessibility' => $this->accessibility ?? [],
+            'tags' => $this->tags ?? [],
+            'layout' => $this->layout ?? [],
+        ]);
+    }
+
+    /**
      * Get the validation rules that apply to the request.
      *
      * @return array<string, \Illuminate\Contracts\Validation\ValidationRule|array<mixed>|string>

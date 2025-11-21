@@ -1,8 +1,10 @@
 import { Link } from '@inertiajs/react';
+import FlashMessages from '@/Components/FlashMessages';
 
 export default function GuestLayout({ children }) {
     return (
         <div className="flex min-h-screen flex-col items-center bg-gray-100 pt-6 sm:justify-center sm:pt-0">
+            <FlashMessages />
             <div>
                 <Link href="/">
                     <h1 className="text-4xl font-bold text-indigo-600">Event App</h1>
