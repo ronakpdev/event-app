@@ -28,7 +28,23 @@ A full-stack event management application built with Laravel, Inertia.js, and Re
 - Docker and Docker Compose (or Docker Desktop)
 - Git
 
-## Setup Instructions
+## Quick Setup
+
+For automated setup, you can use the provided setup script:
+
+```bash
+chmod +x setup.sh
+./setup.sh
+```
+
+This will automatically:
+- Start Docker containers
+- Install dependencies
+- Set up environment file
+- Run migrations and seeders
+- Build frontend assets
+
+## Manual Setup Instructions
 
 ### 1. Clone the repository
 
@@ -52,6 +68,10 @@ docker compose exec app composer install
 ### 4. Install Node dependencies
 
 ```bash
+# Use run --rm for one-time commands (recommended)
+docker compose run --rm node npm install
+
+# Or if node service is running:
 docker compose exec node npm install
 ```
 
@@ -93,14 +113,22 @@ This will:
 
 ### 8. Build frontend assets
 
-For production:
+For production build:
 ```bash
+# Use run --rm for one-time commands (recommended)
+docker compose run --rm node npm run build
+
+# Or if node service is running:
 docker compose exec node npm run build
 ```
 
 For development with hot reload:
 ```bash
-docker compose exec node npm run dev
+# Start the node service
+docker compose up -d node
+
+# The dev server will be available at http://localhost:5173
+# Hot reload is enabled - changes will reflect automatically
 ```
 
 **Note**: If you make changes to configuration files (like `.env`), you may need to clear the config cache:
@@ -131,6 +159,10 @@ docker compose exec app php artisan [command]
 
 For Node commands:
 ```bash
+# For one-time commands (recommended - creates temporary container):
+docker compose run --rm node npm [command]
+
+# Or if node service is running:
 docker compose exec node npm [command]
 ```
 
